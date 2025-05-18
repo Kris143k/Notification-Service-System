@@ -29,27 +29,27 @@ Before you begin, ensure you have the following:
 ## Setup Instructions
 
 1. **Clone the repository**
-<pre>```git clone [your-repository-url]
-cd notification-service```</pre>
+<pre>git clone [your-repository-url]
+cd notification-service</pre>
 
 2. **Install dependencies**
-npm install
+<pre>npm install</pre>
 
 3. **Environment Configuration**
 Create a `.env` file in the root directory with the following variables:
-MONGODB_URI=mongodb://localhost:27017/notifications
+<pre>MONGODB_URI=mongodb://localhost:27017/notifications
 RABBITMQ_URL=amqp://localhost
 EMAIL_USER=your@gmail.com
 EMAIL_PASS=your-gmail-app-password
 TWILIO_SID=your-twilio-account-sid
 TWILIO_AUTH=your-twilio-auth-token
-TWILIO_PHONE=+1234567890
+TWILIO_PHONE=+1234567890</pre>
 
 4. **Start the services**
 Start the API server:
-node index.js
+<pre>node index.js</pre>
 Start the worker (in a separate terminal):
-node worker.js
+<pre>node worker.js</pre>
 The API will be available at [http://localhost:3000](http://localhost:3000)
 ---
 
@@ -60,11 +60,13 @@ The API will be available at [http://localhost:3000](http://localhost:3000)
 **POST** `/notifications`
 
 **Body:**
+<pre>
 {
 "userId": "user@example.com", // or phone number for SMS
 "type": "email", // or "sms", "in-app"
 "message": "Your notification message"
 }
+</pre>
 
 ### Get user notifications
 
@@ -110,11 +112,13 @@ To test the service:
 - Use the GET endpoint to retrieve notification history.
 
 Example:
+<pre>
 curl -X POST -H "Content-Type: application/json" -d '{
 "userId": "test@example.com",
 "type": "email",
 "message": "Test notification"
 }' http://localhost:3000/notifications
+</pre>
 
 ---
 
