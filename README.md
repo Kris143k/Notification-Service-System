@@ -121,7 +121,7 @@ URL:
 **Request Body (for SMS):**
 <pre>json
 {
-  "userId": "+91xxxxxxxxx", // I am using a free account so notifications can be sent to only verfied numbers in my twilio account.It won't work for any other numbers.
+  "userId": "+91xxxxxxxxx", // I am using a free account so notifications can be sent to only verfied numbers in my twilio account.It won't work for any other numbers.Use this number (+918340150160) for testing purpose.
   "type": "sms",
   "message": "This is an SMS notification"
 }</pre>
