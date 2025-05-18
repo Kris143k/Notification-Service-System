@@ -96,9 +96,56 @@ The API will be available at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Deployment
+## Live Deployment
 
-See the Deployment Guide section below for instructions on deploying to Render, Railway, or Heroku.
+Access the deployed API here:
+
+**[https://pepsaleassignment-production.up.railway.app](https://pepsaleassignment-production.up.railway.app)**
+
+## 📌 How to Use the API (Deployed)
+
+### ✅ Create a Notification
+
+**POST** `/notifications`  
+URL:  
+`https://pepsaleassignment-production.up.railway.app/notifications`
+
+**Request Body (for Email):**
+<pre>json
+{
+  "userId": "test@example.com",
+  "type": "email",
+  "message": "This is an email notification"
+}</pre>
+
+**Request Body (for SMS):**
+<pre>json
+{
+  "userId": "+91xxxxxxxxx", // I am using a free account so notifications can be sent to only verfied numbers in my twilio account.It won't work for any other numbers.
+  "type": "sms",
+  "message": "This is an SMS notification"
+}</pre>
+
+**Request Body (for in-app):**
+<pre>json
+{
+  "userId": "user123",
+  "type": "in-app",
+  "message": "This is an in-app notification"
+}</pre>
+
+### Get User Notifications
+GET `/users/:id/notifications`
+Example:
+
+For email:
+<pre>https://pepsaleassignment-production.up.railway.app/users/test@example.com/notifications</pre>
+
+For SMS (phone):
+<pre>https://pepsaleassignment-production.up.railway.app/users/+91xxxxxxxxxx/notifications</pre>
+
+For In-App (user ID):
+<pre>https://pepsaleassignment-production.up.railway.app/users/user123/notifications</pre>
 
 ---
 
