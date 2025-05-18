@@ -29,8 +29,8 @@ Before you begin, ensure you have the following:
 ## Setup Instructions
 
 1. **Clone the repository**
-git clone [your-repository-url]
-cd notification-service
+<pre>```git clone [your-repository-url]
+cd notification-service```</pre>
 
 2. **Install dependencies**
 npm install
