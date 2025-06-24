@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preview": "vite preview --port $PORT",
+    "start": "serve -s dist -l $PORT" 
   },
   "keywords": [],
   "author": "",
